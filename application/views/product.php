@@ -34,249 +34,159 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div id="product-pills-carousel" class="owl-theme owl-carousel nav nav-pills">
-						<li class="active">
-							<a data-toggle="pill" href="#product-1">
-								<div class="product-tab-inside" data-header="<?= base_url(); ?>assets/images/main/history-header.jpg, <?= base_url(); ?>assets/images/main/history-header.jpg, <?= base_url(); ?>assets/images/main/history-header.jpg">
-									<div class="about-tab-icon" data-stroke="<?= base_url(); ?>assets/images/main/product-icon-1.png" data-fill="<?= base_url(); ?>assets/images/main/product-icon-1-white.png">
-										<img src="<?= base_url(); ?>assets/images/main/product-icon-1-white.png">
-									</div>
-									<div class="about-tab-text">
-										<h5>Palm Oil</h5>
-									</div>
-								</div>
-							</a>
-							<div class="product-pills-border"></div>
-						</li>
-						<li>
-							<a data-toggle="pill" href="#product-2">
-								<div class="product-tab-inside" data-header="<?= base_url(); ?>assets/images/main/vision-mission-header.jpg, <?= base_url(); ?>assets/images/main/vision-mission-header.jpg, <?= base_url(); ?>assets/images/main/vision-mission-header.jpg">
-									<div class="about-tab-icon" data-stroke="<?= base_url(); ?>assets/images/main/product-icon-2.png" data-fill="<?= base_url(); ?>assets/images/main/product-icon-2-white.png">
-										<img src="<?= base_url(); ?>assets/images/main/product-icon-2.png">
-									</div>
-									<div class="about-tab-text">
-										<h5>Rice Flour</h5>
-									</div>
-								</div>
-							</a>
-							<div class="product-pills-border"></div>
-						</li>
-						<li>
-							<a data-toggle="pill" href="#product-3">
-								<div class="product-tab-inside" data-header="<?= base_url(); ?>assets/images/main/management-header.jpg, <?= base_url(); ?>assets/images/main/management-header.jpg, <?= base_url(); ?>assets/images/main/management-header.jpg">
-									<div class="about-tab-icon" data-stroke="<?= base_url(); ?>assets/images/main/product-icon-3.png" data-fill="<?= base_url(); ?>assets/images/main/product-icon-3-white.png">
-										<img src="<?= base_url(); ?>assets/images/main/product-icon-3.png">
-									</div>
-									<div class="about-tab-text">
-										<h5>Cassava</h5>
-									</div>
-								</div>
-							</a>
-							<div class="product-pills-border"></div>
-						</li>
-						<li>
-							<a data-toggle="pill" href="#product-4">
-								<div class="product-tab-inside" data-header="<?= base_url(); ?>assets/images/main/management-header.jpg, <?= base_url(); ?>assets/images/main/management-header.jpg, <?= base_url(); ?>assets/images/main/management-header.jpg">
-									<div class="about-tab-icon" data-stroke="<?= base_url(); ?>assets/images/main/product-icon-4.png" data-fill="<?= base_url(); ?>assets/images/main/product-icon-4-white.png">
-										<img src="<?= base_url(); ?>assets/images/main/product-icon-4.png">
-									</div>
-									<div class="about-tab-text">
-										<h5>Coconut</h5>
-									</div>
-								</div>
-							</a>
-							<div class="product-pills-border"></div>
-						</li>
-						<li>
-							<a data-toggle="pill" href="#product-5">
-								<div class="product-tab-inside" data-header="<?= base_url(); ?>assets/images/main/management-header.jpg, <?= base_url(); ?>assets/images/main/management-header.jpg, <?= base_url(); ?>assets/images/main/management-header.jpg">
-									<div class="about-tab-icon" data-stroke="<?= base_url(); ?>assets/images/main/product-icon-5.png" data-fill="<?= base_url(); ?>assets/images/main/product-icon-5-white.png">
-										<img src="<?= base_url(); ?>assets/images/main/product-icon-5.png">
-									</div>
-									<div class="about-tab-text">
-										<h5>Sugar</h5>
-									</div>
-								</div>
-							</a>
-							<div class="product-pills-border"></div>
-						</li>
-						<li>
-							<a data-toggle="pill" href="#product-6">
-								<div class="product-tab-inside" data-header="<?= base_url(); ?>assets/images/main/management-header.jpg, <?= base_url(); ?>assets/images/main/management-header.jpg, <?= base_url(); ?>assets/images/main/management-header.jpg">
-									<div class="about-tab-icon" data-stroke="<?= base_url(); ?>assets/images/main/product-icon-6.png" data-fill="<?= base_url(); ?>assets/images/main/product-icon-6-white.png">
-										<img src="<?= base_url(); ?>assets/images/main/product-icon-6.png">
-									</div>
-									<div class="about-tab-text">
-										<h5>Other</h5>
-									</div>
-								</div>
-							</a>
-						</li>
-
-				</div>
-				<!-- <ul id="product-pills" class="nav nav-pills">
 					<li class="active">
-						<a data-toggle="pill" href="#product-1">
+						<a data-toggle="pill" href="#product-<?= $arr_category[0]->id; ?>">
 							<div class="product-tab-inside" data-header="<?= base_url(); ?>assets/images/main/history-header.jpg, <?= base_url(); ?>assets/images/main/history-header.jpg, <?= base_url(); ?>assets/images/main/history-header.jpg">
 								<div class="about-tab-icon" data-stroke="<?= base_url(); ?>assets/images/main/product-icon-1.png" data-fill="<?= base_url(); ?>assets/images/main/product-icon-1-white.png">
 									<img src="<?= base_url(); ?>assets/images/main/product-icon-1-white.png">
 								</div>
 								<div class="about-tab-text">
-									<h5>Palm Oil</h5>
+									<h5><?= $arr_category[0]->name; ?></h5>
 								</div>
 							</div>
 						</a>
-					</li>
-					<li class="about-tab-divider">
-						<div></div>
+						<div class="product-pills-border"></div>
 					</li>
 					<li>
-						<a data-toggle="pill" href="#product-2">
+						<a data-toggle="pill" href="#product-<?= $arr_category[1]->id; ?>">
 							<div class="product-tab-inside" data-header="<?= base_url(); ?>assets/images/main/vision-mission-header.jpg, <?= base_url(); ?>assets/images/main/vision-mission-header.jpg, <?= base_url(); ?>assets/images/main/vision-mission-header.jpg">
 								<div class="about-tab-icon" data-stroke="<?= base_url(); ?>assets/images/main/product-icon-2.png" data-fill="<?= base_url(); ?>assets/images/main/product-icon-2-white.png">
 									<img src="<?= base_url(); ?>assets/images/main/product-icon-2.png">
 								</div>
 								<div class="about-tab-text">
-									<h5>Rice Flour</h5>
+									<h5><?= $arr_category[1]->name; ?></h5>
 								</div>
 							</div>
 						</a>
-					</li>
-					<li class="about-tab-divider">
-						<div></div>
+						<div class="product-pills-border"></div>
 					</li>
 					<li>
-						<a data-toggle="pill" href="#product-3">
+						<a data-toggle="pill" href="#product-<?= $arr_category[2]->id; ?>">
 							<div class="product-tab-inside" data-header="<?= base_url(); ?>assets/images/main/management-header.jpg, <?= base_url(); ?>assets/images/main/management-header.jpg, <?= base_url(); ?>assets/images/main/management-header.jpg">
 								<div class="about-tab-icon" data-stroke="<?= base_url(); ?>assets/images/main/product-icon-3.png" data-fill="<?= base_url(); ?>assets/images/main/product-icon-3-white.png">
 									<img src="<?= base_url(); ?>assets/images/main/product-icon-3.png">
 								</div>
 								<div class="about-tab-text">
-									<h5>Cassava</h5>
+									<h5><?= $arr_category[2]->name; ?></h5>
 								</div>
 							</div>
 						</a>
-					</li>
-					<li class="about-tab-divider">
-						<div></div>
+						<div class="product-pills-border"></div>
 					</li>
 					<li>
-						<a data-toggle="pill" href="#product-4">
+						<a data-toggle="pill" href="#product-<?= $arr_category[3]->id; ?>">
 							<div class="product-tab-inside" data-header="<?= base_url(); ?>assets/images/main/management-header.jpg, <?= base_url(); ?>assets/images/main/management-header.jpg, <?= base_url(); ?>assets/images/main/management-header.jpg">
 								<div class="about-tab-icon" data-stroke="<?= base_url(); ?>assets/images/main/product-icon-4.png" data-fill="<?= base_url(); ?>assets/images/main/product-icon-4-white.png">
 									<img src="<?= base_url(); ?>assets/images/main/product-icon-4.png">
 								</div>
 								<div class="about-tab-text">
-									<h5>Coconut</h5>
+									<h5><?= $arr_category[3]->name; ?></h5>
 								</div>
 							</div>
 						</a>
-					</li>
-					<li class="about-tab-divider">
-						<div></div>
+						<div class="product-pills-border"></div>
 					</li>
 					<li>
-						<a data-toggle="pill" href="#product-5">
+						<a data-toggle="pill" href="#product-<?= $arr_category[4]->id; ?>">
 							<div class="product-tab-inside" data-header="<?= base_url(); ?>assets/images/main/management-header.jpg, <?= base_url(); ?>assets/images/main/management-header.jpg, <?= base_url(); ?>assets/images/main/management-header.jpg">
 								<div class="about-tab-icon" data-stroke="<?= base_url(); ?>assets/images/main/product-icon-5.png" data-fill="<?= base_url(); ?>assets/images/main/product-icon-5-white.png">
 									<img src="<?= base_url(); ?>assets/images/main/product-icon-5.png">
 								</div>
 								<div class="about-tab-text">
-									<h5>Sugar</h5>
+									<h5><?= $arr_category[4]->name; ?></h5>
 								</div>
 							</div>
 						</a>
-					</li>
-					<li class="about-tab-divider">
-						<div></div>
+						<div class="product-pills-border"></div>
 					</li>
 					<li>
-						<a data-toggle="pill" href="#product-6">
+						<a data-toggle="pill" href="#product-<?= $arr_category[5]->id; ?>">
 							<div class="product-tab-inside" data-header="<?= base_url(); ?>assets/images/main/management-header.jpg, <?= base_url(); ?>assets/images/main/management-header.jpg, <?= base_url(); ?>assets/images/main/management-header.jpg">
 								<div class="about-tab-icon" data-stroke="<?= base_url(); ?>assets/images/main/product-icon-6.png" data-fill="<?= base_url(); ?>assets/images/main/product-icon-6-white.png">
 									<img src="<?= base_url(); ?>assets/images/main/product-icon-6.png">
 								</div>
 								<div class="about-tab-text">
-									<h5>Other</h5>
+									<h5><?= $arr_category[5]->name; ?></h5>
 								</div>
 							</div>
 						</a>
 					</li>
-				</ul> -->
+				</div>
 
 				<div id="product-mobile-tab-carousel" class="owl-carousel owl-theme">
 					<div class="product-mobile-tab-item product-activate">
-						<a data-toggle="pill" href="#product-1">
+						<a data-toggle="pill" href="#product-<?= $arr_category[0]->id; ?>">
 							<div class="product-tab-inside" data-header="<?= base_url(); ?>assets/images/main/history-header.jpg, <?= base_url(); ?>assets/images/main/history-header.jpg, <?= base_url(); ?>assets/images/main/history-header.jpg">
 								<div class="about-tab-icon" data-stroke="<?= base_url(); ?>assets/images/main/product-icon-1.png" data-fill="<?= base_url(); ?>assets/images/main/product-icon-1-white.png">
 									<img src="<?= base_url(); ?>assets/images/main/product-icon-1-white.png">
 								</div>
 								<div class="about-tab-text">
-									<h5>Palm Oil</h5>
+									<h5><?= $arr_category[0]->name; ?></h5>
 								</div>
 							</div>
 						</a>
 						<div class="product-mobile-tab-divider"></div>
 					</div>
 					<div class="product-mobile-tab-item">
-						<a data-toggle="pill" href="#product-2">
+						<a data-toggle="pill" href="#product-<?= $arr_category[1]->id; ?>">
 							<div class="product-tab-inside" data-header="<?= base_url(); ?>assets/images/main/history-header.jpg, <?= base_url(); ?>assets/images/main/history-header.jpg, <?= base_url(); ?>assets/images/main/history-header.jpg">
 								<div class="about-tab-icon" data-stroke="<?= base_url(); ?>assets/images/main/product-icon-2.png" data-fill="<?= base_url(); ?>assets/images/main/product-icon-2-white.png">
 									<img src="<?= base_url(); ?>assets/images/main/product-icon-2.png">
 								</div>
 								<div class="about-tab-text">
-									<h5>Rice Flour</h5>
+									<h5><?= $arr_category[1]->name; ?></h5>
 								</div>
 							</div>
 						</a>
 						<div class="product-mobile-tab-divider"></div>
 					</div>
 					<div class="product-mobile-tab-item">
-						<a data-toggle="pill" href="#product-3">
+						<a data-toggle="pill" href="#product-<?= $arr_category[2]->id; ?>">
 							<div class="product-tab-inside" data-header="<?= base_url(); ?>assets/images/main/history-header.jpg, <?= base_url(); ?>assets/images/main/history-header.jpg, <?= base_url(); ?>assets/images/main/history-header.jpg">
 								<div class="about-tab-icon" data-stroke="<?= base_url(); ?>assets/images/main/product-icon-3.png" data-fill="<?= base_url(); ?>assets/images/main/product-icon-3-white.png">
 									<img src="<?= base_url(); ?>assets/images/main/product-icon-3.png">
 								</div>
 								<div class="about-tab-text">
-									<h5>Cassava</h5>
+									<h5><?= $arr_category[2]->name; ?></h5>
 								</div>
 							</div>
 						</a>
 						<div class="product-mobile-tab-divider"></div>
 					</div>
 					<div class="product-mobile-tab-item">
-						<a data-toggle="pill" href="#product-4">
+						<a data-toggle="pill" href="#product-<?= $arr_category[3]->id; ?>">
 							<div class="product-tab-inside" data-header="<?= base_url(); ?>assets/images/main/history-header.jpg, <?= base_url(); ?>assets/images/main/history-header.jpg, <?= base_url(); ?>assets/images/main/history-header.jpg">
 								<div class="about-tab-icon" data-stroke="<?= base_url(); ?>assets/images/main/product-icon-4.png" data-fill="<?= base_url(); ?>assets/images/main/product-icon-4-white.png">
 									<img src="<?= base_url(); ?>assets/images/main/product-icon-4.png">
 								</div>
 								<div class="about-tab-text">
-									<h5>Coconut</h5>
+									<h5><?= $arr_category[3]->name; ?></h5>
 								</div>
 							</div>
 						</a>
 						<div class="product-mobile-tab-divider"></div>
 					</div>
 					<div class="product-mobile-tab-item">
-						<a data-toggle="pill" href="#product-5">
+						<a data-toggle="pill" href="#product-<?= $arr_category[4]->id; ?>">
 							<div class="product-tab-inside" data-header="<?= base_url(); ?>assets/images/main/history-header.jpg, <?= base_url(); ?>assets/images/main/history-header.jpg, <?= base_url(); ?>assets/images/main/history-header.jpg">
 								<div class="about-tab-icon" data-stroke="<?= base_url(); ?>assets/images/main/product-icon-5.png" data-fill="<?= base_url(); ?>assets/images/main/product-icon-5-white.png">
 									<img src="<?= base_url(); ?>assets/images/main/product-icon-5.png">
 								</div>
 								<div class="about-tab-text">
-									<h5>Sugar</h5>
+									<h5><?= $arr_category[4]->name; ?></h5>
 								</div>
 							</div>
 						</a>
 						<div class="product-mobile-tab-divider"></div>
 					</div>
 					<div class="product-mobile-tab-item">
-						<a data-toggle="pill" href="#product-6">
+						<a data-toggle="pill" href="#product-<?= $arr_category[5]->id; ?>">
 							<div class="product-tab-inside" data-header="<?= base_url(); ?>assets/images/main/history-header.jpg, <?= base_url(); ?>assets/images/main/history-header.jpg, <?= base_url(); ?>assets/images/main/history-header.jpg">
 								<div class="about-tab-icon" data-stroke="<?= base_url(); ?>assets/images/main/product-icon-6.png" data-fill="<?= base_url(); ?>assets/images/main/product-icon-6-white.png">
 									<img src="<?= base_url(); ?>assets/images/main/product-icon-6.png">
 								</div>
 								<div class="about-tab-text">
-									<h5>Other</h5>
+									<h5><?= $arr_category[5]->name; ?></h5>
 								</div>
 							</div>
 						</a>
@@ -291,269 +201,82 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 no-padding tab-content">
-					<div id="product-1" class="col-xs-12 col-sm-12 tab-pane fade in active">
-						<div class="row row-history-1">
-							<div class="product-carousel-shadow">
-								<img src="<?= base_url(); ?>assets/images/main/product-slider-shadow.png">
+					<? foreach ($arr_category as $key => $category): ?>
+						<div id="product-<?= $category->id; ?>" class="col-xs-12 col-sm-12 tab-pane fade <? if ($key <= 0): ?>in active<? endif; ?>">
+							<div class="row row-history-1">
+								<div class="product-carousel-shadow">
+									<img src="<?= base_url(); ?>assets/images/main/product-slider-shadow.png">
+								</div>
+								<div id="product-carousel" class="owl-carousel owl-theme product-carousel-owl">
+									<? foreach ($category->arr_product as $k => $product): ?>
+										<div class="product-item">
+											<div class="product-item-left v-center-tablet">
+												<div class="product-item-left-company" data-before="01">
+													<h6><?= $product->corporate_name; ?></h6>
+												</div>
+												<div class="product-item-left-name">
+													<h2><?= $product->name; ?></h2>
+												</div>
+											</div><!--
+										 --><div class="product-item-middle v-center-tablet">
+												<div class="product-item-middle-pict" style="background-image: url(<?= $setting->setting__system_admin_url; ?>images/website/<?= $product->image_name; ?>);"></div>
+											</div><!--
+										 --><div class="product-item-right v-center-tablet">
+												<div class="product-item-right-subtitle">
+													<h4>Description</h4>
+												</div>
+												<div class="product-item-right-desc">
+													<? if ($lang == $setting->setting__system_language || $product->description_lang == ''): ?>
+														<?= $product->description; ?>
+													<? else: ?>
+														<?= $product->description_lang; ?>
+													<? endif; ?>
+												</div>
+											</div>
+										</div>
+									<? endforeach; ?>
+								</div>
 							</div>
-							<div id="product-carousel" class="owl-carousel owl-theme">
-								<div class="product-item">
-									<div class="product-item-left v-center-tablet">
-										<div class="product-item-left-company" data-before="01">
-											<h6>PT. Tunas Baru Lampung Tbk</h6>
+							<div class="row row-product-2">
+								<div class="col-xs-12 col-sm-12 product-2-border"></div>
+								<div class="row">
+									<? foreach ($category->arr_product as $k => $product): ?>
+										<div class="col-xs-12 col-sm-6 col-md-3 product-2-grid fade-animate" data-animate data-animation-classes="animated fadeInUp" data-index="<?= $k; ?>">
+											<div class="product-2-number">01</div>
+											<div class="col-xs-12 col-sm-12 product-2-pict">
+												<img src="<?= $setting->setting__system_admin_url; ?>images/website/<?= $product->image_name; ?>">
+											</div>
+											<div class="col-xs-12 col-sm-12 product-2-name">
+												<p><?= $product->name; ?></p>
+											</div>
 										</div>
-										<div class="product-item-left-name">
-											<h2>Cooking Oil</h2>
-										</div>
-									</div><!--
-								 --><div class="product-item-middle v-center-tablet">
-										<div class="product-item-middle-pict" style="background-image: url(<?= base_url();?>assets/images/main/product-1.png);"></div>
-									</div><!--
-								 --><div class="product-item-right v-center-tablet">
-										<div class="product-item-right-subtitle">
-											<h4>Description</h4>
-										</div>
-										<div class="product-item-right-desc">
-											<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
-										</div>
-									</div>
-								</div>
-								<div class="product-item">
-									<div class="product-item-left v-center-tablet">
-										<div class="product-item-left-company" data-before="02">
-											<h6>PT. Tunas Baru Lampung Tbk</h6>
-										</div>
-										<div class="product-item-left-name">
-											<h3>CRUDE PALM OIL (CPO)</h3>
-										</div>
-									</div><!--
-								 --><div class="product-item-middle v-center-tablet">
-										<div class="product-item-middle-pict" style="background-image: url(<?= base_url();?>assets/images/main/product-2.png);"></div>
-									</div><!--
-								 --><div class="product-item-right v-center-tablet">
-										<div class="product-item-right-subtitle">
-											<h5>Description</h5>
-										</div>
-										<div class="product-item-right-desc">
-											<h6>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</h6>
-										</div>
-									</div>
-								</div>
-								<div class="product-item">
-									<div class="product-item-left v-center-tablet">
-										<div class="product-item-left-company" data-before="03">
-											<h6>PT. Tunas Baru Lampung Tbk</h6>
-										</div>
-										<div class="product-item-left-name">
-											<h2>Refined Bleached Deodorized Palm Oil</h2>
-										</div>
-									</div><!--
-								 --><div class="product-item-middle v-center-tablet">
-										<div class="product-item-middle-pict" style="background-image: url(<?= base_url();?>assets/images/main/product-3.png);"></div>
-									</div><!--
-								 --><div class="product-item-right v-center-tablet">
-										<div class="product-item-right-subtitle">
-											<h4>Description</h4>
-										</div>
-										<div class="product-item-right-desc">
-											<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
-										</div>
-									</div>
-								</div>
-								<div class="product-item">
-									<div class="product-item-left v-center-tablet">
-										<div class="product-item-left-company" data-before="04">
-											<h6>PT. Tunas Baru Lampung Tbk</h6>
-										</div>
-										<div class="product-item-left-name">
-											<h3>Refined Bleached Deodorized Palm Olein</h3>
-										</div>
-									</div><!--
-								 --><div class="product-item-middle v-center-tablet">
-										<div class="product-item-middle-pict" style="background-image: url(<?= base_url();?>assets/images/main/product-4.png);"></div>
-									</div><!--
-								 --><div class="product-item-right v-center-tablet">
-										<div class="product-item-right-subtitle">
-											<h5>Description</h5>
-										</div>
-										<div class="product-item-right-desc">
-											<h6>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</h6>
-										</div>
-									</div>
-								</div>
-								<div class="product-item">
-									<div class="product-item-left v-center-tablet">
-										<div class="product-item-left-company" data-before="05">
-											<h6>PT. Tunas Baru Lampung Tbk</h6>
-										</div>
-										<div class="product-item-left-name">
-											<h2>Refined Bleached Deodorized Palm Stearin</h2>
-										</div>
-									</div><!--
-								 --><div class="product-item-middle v-center-tablet">
-										<div class="product-item-middle-pict" style="background-image: url(<?= base_url();?>assets/images/main/product-5.png);"></div>
-									</div><!--
-								 --><div class="product-item-right v-center-tablet">
-										<div class="product-item-right-subtitle">
-											<h4>Description</h4>
-										</div>
-										<div class="product-item-right-desc">
-											<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
-										</div>
-									</div>
-								</div>
-								<div class="product-item">
-									<div class="product-item-left v-center-tablet">
-										<div class="product-item-left-company" data-before="06">
-											<h6>PT. Tunas Baru Lampung Tbk</h6>
-										</div>
-										<div class="product-item-left-name">
-											<h3>Palm Fatty Acid Distillate</h3>
-										</div>
-									</div><!--
-								 --><div class="product-item-middle v-center-tablet">
-										<div class="product-item-middle-pict" style="background-image: url(<?= base_url();?>assets/images/main/product-6.png);"></div>
-									</div><!--
-								 --><div class="product-item-right v-center-tablet">
-										<div class="product-item-right-subtitle">
-											<h5>Description</h5>
-										</div>
-										<div class="product-item-right-desc">
-											<h6>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</h6>
-										</div>
-									</div>
-								</div>
-								<div class="product-item">
-									<div class="product-item-left v-center-tablet">
-										<div class="product-item-left-company" data-before="07">
-											<h6>PT. Tunas Baru Lampung Tbk</h6>
-										</div>
-										<div class="product-item-left-name">
-											<h3>Crude Palm Kernel Oil</h3>
-										</div>
-									</div><!--
-								 --><div class="product-item-middle v-center-tablet">
-										<div class="product-item-middle-pict" style="background-image: url(<?= base_url();?>assets/images/main/product-7.png);"></div>
-									</div><!--
-								 --><div class="product-item-right v-center-tablet">
-										<div class="product-item-right-subtitle">
-											<h5>Description</h5>
-										</div>
-										<div class="product-item-right-desc">
-											<h6>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</h6>
-										</div>
-									</div>
+									<? endforeach; ?>
 								</div>
 							</div>
 						</div>
-						<div class="row row-product-2">
-							<div class="col-xs-12 col-sm-12 product-2-border"></div>
-							<div class="row">
-								<div class="col-xs-12 col-sm-6 col-md-3 product-2-grid fade-animate" data-animate data-animation-classes="animated fadeInUp" data-index="0">
-									<div class="product-2-number">01</div>
-									<div class="col-xs-12 col-sm-12 product-2-pict">
-										<img src="<?= base_url(); ?>assets/images/main/product-1.png">
-									</div>
-									<div class="col-xs-12 col-sm-12 product-2-name">
-										<p>Cooking Oil</p>
-									</div>
-								</div>
-								<div class="col-xs-12 col-sm-6 col-md-3 product-2-grid fade-animate" data-animate data-animation-classes="animated fadeInUp" data-index="1">
-									<div class="product-2-number">02</div>
-									<div class="col-xs-12 col-sm-12 product-2-pict">
-										<img src="<?= base_url(); ?>assets/images/main/product-2.png">
-									</div>
-									<div class="col-xs-12 col-sm-12 product-2-name">
-										<p>Crude Palm Oil (CPO)</p>
-									</div>
-								</div>
-								<div class="col-xs-12 col-sm-6 col-md-3 product-2-grid fade-animate" data-animate data-animation-classes="animated fadeInUp" data-index="2">
-									<div class="product-2-number">03</div>
-									<div class="col-xs-12 col-sm-12 product-2-pict">
-										<img src="<?= base_url(); ?>assets/images/main/product-3.png">
-									</div>
-									<div class="col-xs-12 col-sm-12 product-2-name">
-										<p>Refined Bleached Deodorized Palm Oil</p>
-									</div>
-								</div>
-								<div class="col-xs-12 col-sm-6 col-md-3 product-2-grid fade-animate" data-animate data-animation-classes="animated fadeInUp" data-index="3">
-									<div class="product-2-number">04</div>
-									<div class="col-xs-12 col-sm-12 product-2-pict">
-										<img src="<?= base_url(); ?>assets/images/main/product-4.png">
-									</div>
-									<div class="col-xs-12 col-sm-12 product-2-name">
-										<p>Refined Bleached Deodorized Palm Olein</p>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-12 col-sm-6 col-md-3 product-2-grid fade-animate" data-animate data-animation-classes="animated fadeInUp" data-index="4">
-									<div class="product-2-number">05</div>
-									<div class="col-xs-12 col-sm-12 product-2-pict">
-										<img src="<?= base_url(); ?>assets/images/main/product-5.png">
-									</div>
-									<div class="col-xs-12 col-sm-12 product-2-name">
-										<p>Refined Bleached Deodorized Palm Stearin</p>
-									</div>
-								</div>
-								<div class="col-xs-12 col-sm-6 col-md-3 product-2-grid fade-animate" data-animate data-animation-classes="animated fadeInUp" data-index="5">
-									<div class="product-2-number">06</div>
-									<div class="col-xs-12 col-sm-12 product-2-pict">
-										<img src="<?= base_url(); ?>assets/images/main/product-6.png">
-									</div>
-									<div class="col-sm-12 product-2-name">
-										<p>Palm Fatty Acid Distillate</p>
-									</div>
-								</div>
-								<div class="col-xs-12 col-sm-6 col-md-3 product-2-grid fade-animate" data-animate data-animation-classes="animated fadeInUp" data-index="6">
-									<div class="product-2-number">07</div>
-									<div class="col-xs-12 col-sm-12 product-2-pict">
-										<img src="<?= base_url(); ?>assets/images/main/product-7.png">
-									</div>
-									<div class="col-xs-12 col-sm-12 product-2-name">
-										<p>Crude Palm Kernel Oil</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="product-2" class="col-xs-12 col-sm-12 tab-pane fade">
-					</div>
+					<? endforeach; ?>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section id="product-brand">
-		<div class="container-fluid">
-			<div class="row">
-				<div id="home-brand-carousel" class="owl-theme owl-carousel fade-animate" data-animate data-animation-classes="animated fadeInUp">
-					<div class="home-brand-item">
-						<img src="<?= base_url(); ?>assets/images/main/brand-1-white.png">
-					</div>
-					<div class="home-brand-item">
-						<img src="<?= base_url(); ?>assets/images/main/brand-2-white.png">
-					</div>
-					<div class="home-brand-item">
-						<img src="<?= base_url(); ?>assets/images/main/brand-1-white.png">
-					</div>
-					<div class="home-brand-item">
-						<img src="<?= base_url(); ?>assets/images/main/brand-2-white.png">
-					</div>
-					<div class="home-brand-item">
-						<img src="<?= base_url(); ?>assets/images/main/brand-1-white.png">
-					</div>
-					<div class="home-brand-item">
-						<img src="<?= base_url(); ?>assets/images/main/brand-2-white.png">
+	<? if (count($arr_corporate) > 0): ?>
+		<section id="product-brand">
+			<div class="container-fluid">
+				<div class="row">
+					<div id="home-brand-carousel" class="owl-theme owl-carousel fade-animate" data-animate data-animation-classes="animated fadeInUp">
+						<? foreach ($arr_corporate as $corporate): ?>
+							<div class="home-brand-item">
+								<img src="<?= $setting->setting__system_admin_url; ?>images/website/<?= $corporate->image_name; ?>">
+							</div>
+						<? endforeach; ?>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-
+		</section>
+	<? endif; ?>
 
 	<? $this->load->view('footer'); ?>
-
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -681,7 +404,7 @@
 	}
 
 	function productCarousel(){
-		$('#product-carousel').owlCarousel({
+		$('.product-carousel-owl').owlCarousel({
 			autoplay: false,
 			loop: false,
 			nav: true,

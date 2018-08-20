@@ -225,22 +225,46 @@
 					<a href="<?= base_url(); ?>header/view/1/" class="<? if ($type == 'Navigation'): ?>active<? endif; ?> item"><i class="sitemap icon"></i> Navigation</a>
 
 					<a href="<?= base_url(); ?>metatag/view/1/" class="<? if ($type == 'Metatag'): ?>active<? endif; ?> item"><i class="at icon"></i> Meta Tag</a>
-					
+
 					<a href="<?= base_url(); ?>section/view/1/1/" class="<? if ($type == 'Section-1'): ?>active<? endif; ?> item"><i class="at icon"></i> Home Page</a>
+					<a href="<?= base_url(); ?>section/view/2/1/" class="<? if ($type == 'Section-2'): ?>active<? endif; ?> item"><i class="at icon"></i> About Us Page</a>
+					<a href="<?= base_url(); ?>section/view/3/1/" class="<? if ($type == 'Section-3'): ?>active<? endif; ?> item"><i class="at icon"></i> Products Page</a>
+					<a href="<?= base_url(); ?>section/view/4/1/" class="<? if ($type == 'Section-4'): ?>active<? endif; ?> item"><i class="at icon"></i> News & Events Page</a>
+					<a href="<?= base_url(); ?>section/view/5/1/" class="<? if ($type == 'Section-5'): ?>active<? endif; ?> item"><i class="at icon"></i> Career Page</a>
+					<a href="<?= base_url(); ?>section/view/6/1/" class="<? if ($type == 'Section-6'): ?>active<? endif; ?> item"><i class="at icon"></i> Contact Us Page</a>
 				</div>
 			</div>
 		<? endif; ?>
 
 		<? if (isset($acl['management']) && $acl['management']->list > 0): ?>
-			<a href="<?= base_url(); ?>management/view/1/" class="<? if ($type == 'Management'): ?>active<? endif; ?> item"><i class="users icon"></i> Management</a>
+			<a href="<?= base_url(); ?>management/view/1/" class="<? if ($type == 'Management'): ?>active<? endif; ?> item"><i class="id badge outline icon"></i> Management</a>
 		<? endif; ?>
 
 		<? if (isset($acl['career']) && $acl['career']->list > 0): ?>
-			<a href="<?= base_url(); ?>career/view/1/" class="<? if ($type == 'Career'): ?>active<? endif; ?> item"><i class="users icon"></i> Career</a>
+			<a href="<?= base_url(); ?>career/view/1/" class="<? if ($type == 'Career'): ?>active<? endif; ?> item"><i class="plus square icon"></i> Career</a>
 		<? endif; ?>
 
 		<? if (isset($acl['news']) && $acl['news']->list > 0): ?>
-			<a href="<?= base_url(); ?>news/view/1/" class="<? if ($type == 'News'): ?>active<? endif; ?> item"><i class="users icon"></i> News & Events</a>
+			<a href="<?= base_url(); ?>news/view/1/" class="<? if ($type == 'News'): ?>active<? endif; ?> item"><i class="newspaper icon"></i> News & Events</a>
+		<? endif; ?>
+
+		<? if ((isset($acl['product']) && $acl['product']->list > 0) || (isset($acl['category']) && $acl['category']->list > 0) || (isset($acl['company']) && $acl['company']->list > 0)): ?>
+			<div class="ui dropdown item html-dropdown-left-menu">
+				Product <i class="dropdown icon"></i>
+				<div class="menu">
+					<? if (isset($acl['category']) && $acl['category']->list > 0): ?>
+						<a href="<?= base_url(); ?>category/view/1/" class="<? if ($type == 'Category'): ?>active<? endif; ?> item"><i class="sitemap icon"></i> Category</a>
+					<? endif; ?>
+
+					<? if (isset($acl['corporate']) && $acl['corporate']->list > 0): ?>
+						<a href="<?= base_url(); ?>corporate/view/1/" class="<? if ($type == 'Corporate'): ?>active<? endif; ?> item"><i class="building icon"></i> Corporate</a>
+					<? endif; ?>
+
+					<? if (isset($acl['product']) && $acl['product']->list > 0): ?>
+						<a href="<?= base_url(); ?>product/view/1/" class="<? if ($type == 'Product'): ?>active<? endif; ?> item"><i class="suitcase icon"></i> Product</a>
+					<? endif; ?>
+				</div>
+			</div>
 		<? endif; ?>
 
 		<? if (isset($acl['user']) && $acl['user']->list > 0): ?>

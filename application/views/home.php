@@ -203,96 +203,49 @@
 							<div class="home-product-category-inside">
 								<div class="home-product-category">
 									<ul class="nav nav-pills fade-animate" data-animate data-animation-classes="animated fadeInRight">
-										<li class="active"><a data-toggle="pill" href="#home-product-1">PALM OIL</a></li>
-										<li><a data-toggle="pill" href="#home-product-2">RICE FLOUR</a></li>
-										<li><a data-toggle="pill" href="#home-product-3">CASSAVA</a></li>
-										<li><a data-toggle="pill" href="#home-product-4">COCONUT</a></li>
-										<li><a data-toggle="pill" href="#home-product-5">SUGAR</a></li>
-										<li><a data-toggle="pill" href="#home-product-6">OTHER</a></li>
+										<? foreach ($arr_category as $key => $category): ?>
+											<li <? if ($key <= 0): ?>class="active"<? endif; ?>><a data-toggle="pill" href="#home-product-<?= $category->id; ?>"><?= $category->name; ?></a></li>
+										<? endforeach; ?>
 									</ul>
 								</div>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-10 tab-content no-padding">
-							<div id="home-product-1" class="tab-pane fade in active">
-								<div class="row row-eq-height-tablet">
-									<div class="col-xs-12 col-sm-9 fade-animate" data-animate data-animation-classes="animated fadeInUp">
-										<div class="owl-theme owl-carousel home-product-carousel">
-											<div class="home-product-item">
-												<div class="home-product-inside-item"  style="background-image: url(<?= base_url(); ?>assets/images/main/bottle.jpg)">
-													<div class="home-product-item-title">
-														<p>PT. Tunas Baru Lampung Tbk</p>
+							<? foreach ($arr_category as $key => $category): ?>
+								<div id="home-product-<?= $category->id; ?>" class="tab-pane fade <? if ($key <= 0): ?>in active<? endif; ?>">
+									<div class="row row-eq-height-tablet">
+										<div class="col-xs-12 col-sm-9 fade-animate" data-animate data-animation-classes="animated fadeInUp">
+											<div class="owl-theme owl-carousel home-product-carousel">
+												<? foreach ($category->arr_product as $product): ?>
+													<div class="home-product-item">
+														<div class="home-product-inside-item"  style="background-image: url(<?= $setting->setting__system_admin_url; ?>images/website/<?= $product->image_name; ?>)">
+															<div class="home-product-item-title">
+																<p><?= $product->corporate_name; ?></p>
+															</div>
+														</div>
 													</div>
-												</div>
+												<? endforeach; ?>
 											</div>
-											<div class="home-product-item">
-												<div class="home-product-inside-item" style="background-image: url(<?= base_url(); ?>assets/images/main/bottle.jpg)">
-													<div class="home-product-item-title">
-														<p>PT. Tunas Baru Lampung Tbk</p>
-													</div>
-												</div>
-											</div>
-											<div class="home-product-item">
-												<div class="home-product-inside-item" style="background-image: url(<?= base_url(); ?>assets/images/main/bottle.jpg)">
-													<div class="home-product-item-title">
-														<p>PT. Tunas Baru Lampung Tbk</p>
-													</div>
-												</div>
-											</div>
-											<div class="home-product-item">
-												<div class="home-product-inside-item" style="background-image: url(<?= base_url(); ?>assets/images/main/bottle.jpg)">
-													<div class="home-product-item-title">
-														<p>PT. Tunas Baru Lampung Tbk</p>
-													</div>
-												</div>
-											</div>
-											<div class="home-product-item">
-												<div class="home-product-inside-item" style="background-image: url(<?= base_url(); ?>assets/images/main/bottle.jpg)">
-													<div class="home-product-item-title">
-														<p>PT. Tunas Baru Lampung Tbk</p>
-													</div>
-												</div>
-											</div>
-											<div class="home-product-item">
-												<div class="home-product-inside-item" style="background-image: url(<?= base_url(); ?>assets/images/main/bottle.jpg)">
-													<div class="home-product-item-title">
-														<p>PT. Tunas Baru Lampung Tbk</p>
-													</div>
-												</div>
-											</div>
-											<div class="home-product-item">
-												<div class="home-product-inside-item" style="background-image: url(<?= base_url(); ?>assets/images/main/bottle.jpg)">
-													<div class="home-product-item-title">
-														<p>PT. Tunas Baru Lampung Tbk</p>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="home-sub-category-line-dots">
-											<ul id="home-sub-category-line-dot-list" class="owl-dots">
-												<li class="owl-dot active" data-index="0"><div data-before="01"></div></li>
-											</ul>
-										</div>
-									</div><!--
-								 --><div class="col-xs-12 col-sm-3 home-sub-product-wrap fade-animate" data-animate data-animation-classes="animated fadeInLeft">
-										<div class="home-sub-product-category-inside">
-											<div class="home-sub-product-category">
-												<ul id="home-sub-category-dots" class="owl-dots nav nav-pills">
-													<li class="owl-dot active">Cooking Oil</li>
-													<li class="owl-dot">Crude Palm Oil (CPO)</li>
-													<li class="owl-dot">Refined Bleached Deodorized Palm Oil</li>
-													<li class="owl-dot">Refined Bleached Deodorized Palm Olein</li>
-													<li class="owl-dot">Refined Bleached Deodorized Palm Stearin</li>
-													<li class="owl-dot">Palm Fatty Acid Distillate</li>
-													<li class="owl-dot">Crude Palm Kernel Oil</li>
+											<div class="home-sub-category-line-dots">
+												<ul id="home-sub-category-line-dot-list" class="owl-dots">
+													<li class="owl-dot active" data-index="0"><div data-before="01"></div></li>
 												</ul>
+											</div>
+										</div><!--
+									 --><div class="col-xs-12 col-sm-3 home-sub-product-wrap fade-animate" data-animate data-animation-classes="animated fadeInLeft">
+											<div class="home-sub-product-category-inside">
+												<div class="home-sub-product-category">
+													<ul id="home-sub-category-dots" class="owl-dots nav nav-pills">
+														<? foreach ($category->arr_product as $k => $product): ?>
+															<li class="owl-dot <? if ($k <= 0): ?>active<? endif; ?>"><?= $product->name; ?></li>
+														<? endforeach; ?>
+													</ul>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div id="home-product-2" class="tab-pane fade">
-							</div>
+							<? endforeach; ?>
 						</div>
 					</div>
 				</div>
@@ -338,74 +291,42 @@
 				</div><!--
 			 --><div class="v-center col-xs-12 col-sm-9 home-news-carousel-wrap fade-animate" data-animate data-animation-classes="animated fadeInRight">
 					<div id="home-news-carousel" class="owl-carousel owl-theme">
-						<div class="home-news-item">
-							<div class="home-news-bg" style="background-image: url(<?= base_url(); ?>assets/images/main/news-thumb-1.jpg);"></div>
-							<div class="home-news-subtitle">
-								<p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit</p>
+						<? foreach ($arr_news as $news): ?>
+							<div class="home-news-item">
+								<div class="home-news-bg" style="background-image: url(<?= $setting->setting__system_admin_url; ?>images/website/<?= $news->image_name; ?>);"></div>
+								<div class="home-news-subtitle">
+									<? if ($lang == $setting->setting__system_language || $news->name_lang == ''): ?>
+										<p><?= $news->name; ?></p>
+									<? else: ?>
+										<p><?= $news->name_lang; ?></p>
+									<? endif; ?>
+								</div>
+								<div class="home-news-button">
+									<a href="<?= base_url(); ?>newsandevent/detail/<?= $news->url_name; ?>/"><button class="btn btn-read-more"><span>READ MORE</span></button></a>
+								</div>
 							</div>
-							<div class="home-news-button">
-								<a href=""><button class="btn btn-read-more"><span>READ MORE</span></button></a>
-							</div>
-						</div>
-						<div class="home-news-item">
-							<div class="home-news-bg" style="background-image: url(<?= base_url(); ?>assets/images/main/news-thumb-2.jpg);"></div>
-							<div class="home-news-subtitle">
-								<p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit</p>
-							</div>
-							<div class="home-news-button">
-								<a href=""><button class="btn btn-read-more"><span>READ MORE</span></button></a>
-							</div>
-						</div>
-						<div class="home-news-item">
-							<div class="home-news-bg" style="background-image: url(<?= base_url(); ?>assets/images/main/news-thumb-1.jpg);"></div>
-							<div class="home-news-subtitle">
-								<p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit</p>
-							</div>
-							<div class="home-news-button">
-								<a href=""><button class="btn btn-read-more"><span>READ MORE</span></button></a>
-							</div>
-						</div>
-						<div class="home-news-item">
-							<div class="home-news-bg" style="background-image: url(<?= base_url(); ?>assets/images/main/news-thumb-2.jpg);"></div>
-							<div class="home-news-subtitle">
-								<p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit</p>
-							</div>
-							<div class="home-news-button">
-								<a href=""><button class="btn btn-read-more"><span>READ MORE</span></button></a>
-							</div>
-						</div>
+						<? endforeach; ?>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section id="home-brand">
-		<div class="container-fluid">
-			<div class="row">
-				<div id="home-brand-carousel" class="owl-theme owl-carousel fade-animate" data-animate data-animation-classes="animated fadeInUp">
-					<div class="home-brand-item">
-						<img src="<?= base_url(); ?>assets/images/main/brand-1.png">
-					</div>
-					<div class="home-brand-item">
-						<img src="<?= base_url(); ?>assets/images/main/brand-2.png">
-					</div>
-					<div class="home-brand-item">
-						<img src="<?= base_url(); ?>assets/images/main/brand-1.png">
-					</div>
-					<div class="home-brand-item">
-						<img src="<?= base_url(); ?>assets/images/main/brand-2.png">
-					</div>
-					<div class="home-brand-item">
-						<img src="<?= base_url(); ?>assets/images/main/brand-1.png">
-					</div>
-					<div class="home-brand-item">
-						<img src="<?= base_url(); ?>assets/images/main/brand-2.png">
+	<? if (count($arr_corporate) > 0): ?>
+		<section id="home-brand">
+			<div class="container-fluid">
+				<div class="row">
+					<div id="home-brand-carousel" class="owl-theme owl-carousel fade-animate" data-animate data-animation-classes="animated fadeInUp">
+						<? foreach ($arr_corporate as $corporate): ?>
+							<div class="home-brand-item">
+								<img src="<?= $setting->setting__system_admin_url; ?>images/website/<?= $corporate->image_name; ?>">
+							</div>
+						<? endforeach; ?>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+	<? endif; ?>
 
 	<section id="home-contact">
 		<div class="container-fluid">
@@ -562,17 +483,19 @@
 	}
 
 	function homeProductCarousel(){
-		$('.home-product-carousel').owlCarousel({
-			autoplay: false,
-			center: true,
-			loop: false,
-			nav: true,
-			items: 3,
-			dotsContainer: '#home-sub-category-dots',
-			navText: ['<img src="<?= base_url(); ?>assets/images/main/arrow-prev.png">','<img src="<?= base_url(); ?>assets/images/main/arrow-next.png">'],
-			touchDrag: false,
-			mouseDrag: false
-		});
+		setTimeout(function() {
+			$('.home-product-carousel').owlCarousel({
+				autoplay: false,
+				center: true,
+				loop: false,
+				nav: true,
+				items: 3,
+				dotsContainer: '#home-sub-category-dots',
+				navText: ['<img src="<?= base_url(); ?>assets/images/main/arrow-prev.png">','<img src="<?= base_url(); ?>assets/images/main/arrow-next.png">'],
+				touchDrag: false,
+				mouseDrag: false
+			});
+		}, 1000);
 
 		var countList = $("#home-sub-category-dots li").length;
 
